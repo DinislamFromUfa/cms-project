@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:cms_project"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Content="Панель администратора"></Button>
+            <Button Content="Управление контентом"></Button>
+            <Button Content="Статистика"></Button>
+            <Button Content="Рассылки"></Button>
+        </StackPanel>
     </Grid>
 </Window>
