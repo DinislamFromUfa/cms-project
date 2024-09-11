@@ -12,10 +12,11 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <Button Content="Панель администратора"></Button>
-            <Button Content="Управление контентом"></Button>
-            <Button Content="Статистика"></Button>
-            <Button Content="Рассылки"></Button>
+            <Button Content="Панель администратора" x:Name="PanelAdministration" Click="PanelAdministration_Click"></Button>
+            <Button Content="Управление контентом" x:Name="ContentManagement" Click="ContentManagement_Click"></Button>
+            <Button Content="Статистика" x:Name="Statistics" Click="Statistics_Click"></Button>
+            <Button Content="Рассылки" x:Name="Mailings" Click="Mailings_Click"></Button>
         </StackPanel>
+        <Frame Grid.Column="1" x:Name="Pages"/>
     </Grid>
 </Window>

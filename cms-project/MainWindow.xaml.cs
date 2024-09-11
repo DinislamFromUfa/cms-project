@@ -20,5 +20,26 @@ namespace cms_project
         {
             InitializeComponent();
         }
+
+        private void PanelAdministration_Click(object sender, RoutedEventArgs e)
+        {
+            Pages.Navigate( new PageAdminPanel());
+
+        }
+
+        private void ContentManagement_Click(object sender, RoutedEventArgs e)
+        {
+            Pages.Navigate(new PageContentManage());
+        }
+
+        private void Statistics_Click(object sender, RoutedEventArgs e)
+        {
+            Pages.Navigate(new PageStatistics());
+        }
+
+        private void Mailings_Click(object sender, RoutedEventArgs e)
+        {
+            Pages.Navigate(new PageMailings());
+        }
     }
 }
