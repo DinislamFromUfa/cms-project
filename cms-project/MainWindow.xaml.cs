@@ -19,6 +19,17 @@ namespace cms_project
         public MainWindow()
         {
             InitializeComponent();
+
+            LoginWindow loginWindow = new LoginWindow();
+
+
+            if (loginWindow.ShowDialog() == true) {
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void PanelAdministration_Click(object sender, RoutedEventArgs e)
