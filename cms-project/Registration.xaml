@@ -1,0 +1,19 @@
+﻿<Window x:Class="cms_project.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cms_project"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label Content="Логин: "/>
+            <TextBox Name="Name"></TextBox>
+            <Label Content="Пароль: "/>
+            <PasswordBox Name="Password"></PasswordBox>
+            <Button Content="Регистрация" Name="Reg" Click="Reg_Click"></Button>
+            <Button Content="Вход" Name="btnLogin" Click="btnLogin_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

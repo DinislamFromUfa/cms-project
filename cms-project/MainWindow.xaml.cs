@@ -20,10 +20,10 @@ namespace cms_project
         {
             InitializeComponent();
 
-            LoginWindow loginWindow = new LoginWindow();
+            Registration registration = new Registration();
 
 
-            if (loginWindow.ShowDialog() == true) {
+            if (registration.ShowDialog() == true) {
                 this.Show();
             }
             else
