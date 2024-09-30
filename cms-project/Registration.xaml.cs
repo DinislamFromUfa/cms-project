@@ -31,8 +31,7 @@ namespace cms_project
             {
                 using (StreamWriter writer = new StreamWriter(path, true)) 
                 {
-                    writer.WriteLine(Name.Text.ToString());
-                    writer.WriteLine(Password.Password.ToString());
+                    writer.WriteLine(Name.Text.ToString() + ":" + Password.Password.ToString());
                     writer.Close();
                 }
 
@@ -40,16 +39,8 @@ namespace cms_project
 
 
                     MessageBox.Show("Регистрация успешно пройдена!");
-                LoginWindow loginWindow = new LoginWindow();
-                if (loginWindow.ShowDialog() == true)
-                {
-                    this.Show();
-
-                }
-                else
-                {
-                    this.Close();
-                }
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show(); // Показываем главное окно
 
             }
         }
