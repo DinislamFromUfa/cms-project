@@ -29,7 +29,7 @@ namespace cms_project
             string login = AdminName.Text;
             string password = AdminPassword.Password;
 
-            if (login == "Admin" &&  password == "Kirill")
+            if (login == "Admin" &&  password == "Admin")
             {
                 this.DialogResult = true;
                 this.Close();

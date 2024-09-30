@@ -11,27 +11,46 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace cms_project
 {
-    /// <summary>
-    /// Логика взаимодействия для Registration.xaml
-    /// </summary>
     public partial class Registration : Window
     {
         public Registration()
         {
             InitializeComponent();
         }
-
+        string path = "D:\\github\\cms-project\\database.txt";
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
             if(Name.ToString() == "" || Password.ToString() == "")
                 MessageBox.Show("Неверный логин или пароль!");
+
             if (Name.ToString() != "" && Password.ToString() != "")
             {
-                MessageBox.Show("Регистрация успешно пройдена!");
-                this.Close();
+                using (StreamWriter writer = new StreamWriter(path, true)) 
+                {
+                    writer.WriteLine(Name.Text.ToString());
+                    writer.WriteLine(Password.Password.ToString());
+                    writer.Close();
+                }
+
+
+
+
+                    MessageBox.Show("Регистрация успешно пройдена!");
+                LoginWindow loginWindow = new LoginWindow();
+                if (loginWindow.ShowDialog() == true)
+                {
+                    this.Show();
+
+                }
+                else
+                {
+                    this.Close();
+                }
+
             }
         }
 
