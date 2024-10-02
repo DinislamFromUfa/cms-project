@@ -20,16 +20,7 @@ namespace cms_project
         {
             InitializeComponent();
 
-            Registration registration = new Registration();
-
-
-            if (registration.ShowDialog() == true) {
-                this.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+            
         }
 
         private void PanelAdministration_Click(object sender, RoutedEventArgs e)
